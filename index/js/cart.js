@@ -29,7 +29,7 @@ class UI {
                 return `
                     <div class="cart__producto" data-cart="${item.id}">
                         <div class="producto__imagen">
-                            <img width="200px" class="imagen__producto" src="../imagenes/${item.imagen}">
+                            <img width="200px" class="imagen__producto" src="./imagenes/${item.imagen}">
                         </div>
                         <div class="producto__detalle">
                             <h2 class="producto__name">${item.name}</h2>

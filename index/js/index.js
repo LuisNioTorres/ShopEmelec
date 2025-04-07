@@ -10,7 +10,7 @@ class UI {
             return `
             <div class="shop__item" id="shop__item?=${item.id}" >
                 <div class="item__imagen" onclick="UI.verProducto('${item.id}')">
-                    <img class="imagen__item" src="../imagenes/${item.imagen}">
+                    <img class="imagen__item" src="./imagenes/${item.imagen}">
                 </div>
                 <div class="item__detalle">
                     <h2 class="detalle__name" onclick="UI.verProducto('${item.id}')"> ${item.name} </h2>
@@ -91,7 +91,7 @@ class UI {
                 return `
                     <div class="articulo">
                             <div class="articulo__imagen">
-                                <img class="imagen__articulo" src="../imagenes/${item.imagen}">
+                                <img class="imagen__articulo" src="./imagenes/${item.imagen}">
                             </div>
                             <div class="articulo__detalle">
                                 <div class="articulo__botonX" onclick="UI.removeCartItem(${item.id})"><i class="bi bi-x"></i></div>

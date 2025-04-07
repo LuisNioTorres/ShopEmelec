@@ -17,11 +17,11 @@ class UI {
         return producto.innerHTML = `
                         <div class="producto__imagenes" >
                     <div class="imagenes__imagenPrincipal">
-                        <img class="imagenPrincipal" src="../imagenes/${search.imagen}">
+                        <img class="imagenPrincipal" src="./imagenes/${search.imagen}">
                     </div>
                     <div class="imagenes__imagenSecundaria">
-                        <img class="imagenSecundaria" id="imagenSecundaria1" src="../imagenes/secundaria1.jpg">
-                        <img class="imagenSecundaria" id="imagenSecundaria2" src="../imagenes/secundaria2.jpg">
+                        <img class="imagenSecundaria" id="imagenSecundaria1" src="./imagenes/secundaria1.jpg">
+                        <img class="imagenSecundaria" id="imagenSecundaria2" src="./imagenes/secundaria2.jpg">
                     </div>
                 </div>
                 <div class="producto__detalle">
@@ -49,7 +49,7 @@ class UI {
         recomendaciones__productos.innerHTML = nuevoArreglo.map((item)=>{
             return `
                         <div class="recomendacion" onclick="UI.verProducto('${item.id}')">
-                        <img width="100px" class="recomendacion__imagen" src="../imagenes/${item.imagen}">
+                        <img width="100px" class="recomendacion__imagen" src="./imagenes/${item.imagen}">
                         <h2 class="recomendacion__nombre">${item.name}</h2>
                         <h2 class="producto__precio">$${item.price}</h2>
                         </div>

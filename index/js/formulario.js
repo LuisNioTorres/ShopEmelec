@@ -16,7 +16,7 @@ class UI {
                     producto.classList.add('producto');
                     producto.innerHTML = `
                         <div class="producto__imagen">
-                            <img  src="../imagenes/${item.imagen}" class="producto_imagen">
+                            <img  src="./imagenes/${item.imagen}" class="producto_imagen">
                         </div>
                         <div class="producto__detalle">
                             <h3 class="producto__nombre">${item.name}</h3>
@@ -366,7 +366,7 @@ class Formulario {
                     UI.generateMensajeExito();
                     setTimeout(()=>{
                         UI.generateFacturaFinal();
-                    },2200);
+                    },1800);
                     
                 } else {
                     UI.generateMensajeError();
