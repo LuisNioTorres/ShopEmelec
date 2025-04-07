@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP CSE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/formulario.css">
+
+</head>
+<body>
+    
+    <div class="navbar" id="navbar">
+        <div class="navbar__imagen">
+            <a href="./index.html">
+                <img class="imagen__logo" src="../imagenes/emelec.jpg">
+            </a>
+        </div>
+
+        <div class="navbar__titulo">
+            <h2 class="titulo__titulo"> CASA </h2>
+            <img class="imagen__adidas" src="../imagenes/adidas.png">
+        </div>
+
+        <div class="navbar__cart">
+                <i class="bi bi-cart2"> </i>
+                <div class="cart__number" id="cart__number">0</div>
+        </div>
+
+    </div>
+
+    <div class="index">
+        <div class="shopcart_logo">
+            <i class="bi bi-cart2 carrito"></i>
+            <h2 class="shopcart">SHOPPING CART</h2>
+        </div>
+    
+        <div class="payment" id="payment">
+            <section class="payment__formulario" id="formulario">
+                <h2 class="formulario__encabezado">Formulario de Compra</h2>
+                <div class="formulario__tarjetas">
+                    <div class="tarjeta" id="tarjeta1">
+                        <div class="tarjeta_info">
+                            <i class="bi bi-paypal"></i>
+                            <p class="tarjeta_nombre">Paypal</p>
+                        </div>
+                        <div class="tarjeta_check">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+    
+                    </div>
+                    
+                    <div class="tarjeta" id="tarjeta2">
+                        <div class="tarjeta_info">
+                            <i class="bi bi-credit-card"></i>
+                            <p class="tarjeta_nombre">MasterCard</p>
+                        </div>
+                        <div class="tarjeta_check">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+    
+                <div class="formulario__informacion_cliente" id="informacion_cliente">
+                    <div class="formulario__grupo" id="cedula">
+                        <label class="label" for="input__cedula">C.I:</label>
+                        <input type="text" class="input" id="input__cedula" name="cedula">
+                    </div>
+    
+                    <div class="formulario__grupo" id="nombre">
+                        <label class="label" for="input__nombre">Nombre Completo del Titular:</label>
+                        <input type="text" class="input" id="input__nombre" name="nombre">
+                    </div>
+    
+                    <div class="formulario__grupo" id="numero_tarjeta">
+                        <label class="label" for="input__numero_tarjeta">Cart Number:</label>
+                        <input type="text" class="input" id="input__numero_tarjeta" name="numero">
+                    </div>
+                </div>
+    
+                <div class="formulario__informacion_tarjeta" id="informacion_tarjeta">
+                    <div class="tarjeta__date">
+                        <label for="" class="label">Expiration Date:</label>
+    
+                        <div class="date__inputs">
+                        <input type="text" class="input__date input" id="input__year" name="mes"> /
+                        <input type="text" class="input__date input" id="input__month" name="dia">
+                        </div>
+    
+                    </div>
+                    <div class="tarjeta__cvv">
+                        <label for="input__cvv" class="label">Cvv:</label>
+                        <input type="text" class="input__cvv input" id="input__cvv" name="codigo" placeholder="333">
+                    </div>
+                </div>
+    
+                <div class="boton__pagar">Pagar <h2 class="total__price">$CAMBIA</h2></div>
+                <div class="mensaje__error"></div>    
+                <div class="mensaje__exito">Tu compra se realizó con exito! Gracias</div>
+            </section>
+    
+            <section class="payment__compra">
+                <div class="compra__desglose">
+                    <h2 class="desglose__titulo" id="desglose__titulo">ORDER SUMMERY</h2>
+                </div>
+    
+                <div class="compra__descuento">
+                    <input type="text" class="input__descuento" id="input__descuento" placeholder="303">
+                    <div class="descuento__boton" id="descuento__boton">Aplicar Descuento</div>
+                </div>
+    
+                <div class="compra__informacion_final">
+                    <section class="info__grupo">
+                        <h3 class="titulo" id="subtotal">Subtotal</h3>
+                        <h3 class="titulo" id="iva">IVA 12%</h3>
+                        <h3 class="titulo" id="descuento">Descuento</h3>
+                        <h3 class="titulo" id="total">Total</h3>
+                    </section>
+    
+                    <section class="info__grupo">
+                        <h3 class="titulo" id="subtotal_numero">$30.00</h3>
+                        <h3 class="titulo" id="iva_numero">$10.00</h3>
+                        <h3 class="titulo" id="descuento_numero">$0.00</h3>
+                        <h3 class="titulo" id="total_numero">$40.00</h3>
+                    </section>
+    
+                </div>
+    
+            </section>
+    
+        </div>
+    </div>
+
+
+</body>
+<script src="../js/infoItem.js"></script>
+<script type="module" src="../js/store.js"></script>
+<script src="../js/formulario.js" type="module"></script>
+</html>

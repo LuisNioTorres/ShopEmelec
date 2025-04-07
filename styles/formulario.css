@@ -1,0 +1,939 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: black;
+}
+
+.index{
+    max-width: 1250px; /* Ajusta el tamaño según necesites */
+    margin: auto; /* Centra el contenido */
+}
+
+.shopcart_logo{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.carrito{
+    font-size: 25px;
+}
+
+
+
+
+.payment{
+    margin-top: 10px;
+    width: 100%;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-bottom: 20px;
+}
+
+.payment__formulario{
+    background-color: white;
+    border: solid 1px rgb(231, 227, 227);
+    padding: 15px 15px 35px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 600px;
+}
+
+.formulario__tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    gap: 15px;
+}
+
+.tarjeta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.tarjeta.active{
+    background-color: rgb(73, 224, 73);
+    border: none;
+}
+
+.tarjeta.active:hover{
+    background-color: #4cda4c;
+}
+
+.bi-check-circle.active{
+    color:white;
+    font-size: 20px;
+}
+
+.tarjeta:hover{
+    background-color: rgb(212, 208, 208);
+}
+
+.tarjeta_info{
+    display: flex;
+    gap: 10px;
+}
+
+.formulario__informacion_cliente{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+}
+
+.formulario__grupo{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 5px;
+}
+
+.label{
+    color: rgb(156, 149, 149);
+    padding-left: 10px;
+}
+
+.input{
+    background-color: rgb(241, 241, 241);
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: rgb(63, 63, 63);
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid #acaeaf; /* Azul profesional */
+    box-shadow: 0 0 5px rgba(151, 151, 151, 0.5);
+}
+
+.formulario__informacion_tarjeta{
+    display: flex;
+    gap: 40%;
+    padding: 5px;
+}
+
+.tarjeta__date{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input__date{
+    background-color: rgb(241, 241, 241);
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: rgb(63, 63, 63);
+    width: 80px;
+}
+
+.tarjeta__cvv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input__cvv{
+    background-color: rgb(241, 241, 241);
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: rgb(63, 63, 63);
+    width: 60px;
+}
+
+.boton__pagar{
+    background-color: #1b7ce4 ;
+    border-radius: 5px;
+    width: max-content;
+    display: flex;
+    margin-left: 10px;
+    padding: 5px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.total__price{
+    font-size: 17px;
+    color: white;
+}
+
+
+
+
+
+
+
+.payment__compra{
+    display: grid;
+    grid-template-rows: 55% 9% 36%;
+    background-color: white;
+    border: solid 1px rgb(231, 227, 227);
+    border-left: none;
+    padding: 15px 15px 20px 25px;
+    height: 600px;
+}
+
+.compra__desglose{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y:scroll;
+}
+
+.producto{
+    width: 100%;
+    height: max-content;
+    padding: 1px 10px;
+    border-radius: 5px;
+    display: flex;
+    gap: 16px;
+    border: solid 1px rgb(223, 215, 215);
+    cursor: default;
+}
+
+.producto__nombre{
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    overflow: hidden; /* Oculta el texto sobrante */
+    text-overflow: ellipsis; /* Muestra "..." cuando el texto se corta */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita a 2 líneas */
+    -webkit-box-orient: vertical;
+    word-break: break-word; /* Permite saltos de línea */
+}
+
+.producto__imagen{
+    width: 150px;
+    height: 130px;
+    display: flex;
+}
+
+.producto_imagen{
+    width: 150px;
+    height: 130px;
+}
+
+.producto__precio{
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-size: 18px
+}
+
+
+
+.producto__detalle{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.producto__cantidad{
+    display: flex;
+    gap: 10px;
+}
+
+.compra__descuento{
+    margin-top: 20px;
+    display: flex;
+}
+
+.input__descuento{
+    background-color: rgb(241, 241, 241);
+    border: solid 1px rgb(199, 198, 198);
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: rgb(63, 63, 63);
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.input__descuento.correcto{
+    border: solid 2px rgb(91, 177, 124);
+    cursor: default;
+}
+
+.input__descuento.incorrecto{
+    border: solid 2px rgb(228, 79, 79);
+}
+
+#descuento_numero.active{
+    color: rgb(91, 177, 124);
+}
+
+.descuento__boton{
+    background-color: #39b939 ;
+    border-radius: 5px;
+    width: max-content;
+    display: flex;
+    margin-left: 10px;
+    padding: 2px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.compra__informacion_final{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 20px 0 20px;
+    position: relative;
+}
+
+.info__grupo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 15px;
+    align-items:flex-start;
+    color: #39393a;
+}
+
+.mensaje__error{
+    background-color: rgb(233, 108, 108);
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.mensaje__error.vacio{
+    background-color: rgb(53, 53, 235);
+    display: block;
+    color: white;
+    font-size: 20px;
+}
+
+.mensaje__error.active{
+    display: block;
+}
+
+.mensaje__exito{
+    background-color: rgb(126, 216, 117);
+    border: solid 1px rgb(78, 139, 99);
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.mensaje__exito.active{
+    display: block;
+}
+
+.factura_final{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 10px 0 35% 5px;
+
+}
+
+.compra__informacion_final.active{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 20px 0 20px;
+}
+
+.compra__desglose.active{
+    overflow:visible;
+}
+
+.titulo.active{
+    border-top: solid 1px black;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.info__grupo.active{
+    gap: 30px;
+}
+
+.info__grupo.active.end{
+    align-items: end;
+}
+
+.bi-check-circle.factura{
+    font-size: 80px;
+    background-color: white;
+    color: #4cda4c;
+    position: absolute;
+    bottom: -40%;
+    right: 40%;
+}
+
+/* 
+@media (max-width :1024px) {
+
+    .navbar__cart{
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
+}
+
+@media (max-width : 700px){
+
+    .navbar__imagen{
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+    }
+    
+    .imagen__logo{
+        width: 90px;
+        height: 70px;
+        cursor: pointer;
+    }
+    
+    .navbar__titulo{
+        height: 85px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .titulo__titulo{
+        color: white;
+        font-size: 40px;
+    }
+    
+    .imagen__adidas{
+        height: 50%;
+    }
+
+}
+
+@media  screen and (max-width : 951px) {
+.index{
+    width: 98%;
+}    
+
+.payment{
+    grid-template-columns: 60% 40%;
+}
+
+}
+
+@media  screen and (max-width : 850px) {
+    .payment{
+        grid-template-columns: 55% 45%;
+    }
+
+}
+
+@media  screen and (max-width : 750px) {
+    .payment{
+        grid-template-columns: 55% 45%;
+    }
+
+    .producto{
+        padding: 1px 5px;
+        gap: 5px;
+    }
+
+    .producto__imagen{
+        width: 95%;
+        height: 130px;
+        display: flex;
+    }
+
+    .producto_imagen{
+        width: 100%;
+    }
+
+    .descuento__boton{
+        margin-left: 10px;
+        padding: 2px 5px;
+        font-size: 17px;
+    }
+
+}
+
+@media  screen and (max-width : 670px) {
+    .payment__formulario{
+        padding: 10px 10px;
+    }
+
+    .payment__compra{
+        padding: 10px 10px;
+    }
+
+    .tarjeta{
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .formulario__informacion_tarjeta{
+        gap: 20%;
+    }
+    
+}
+
+@media screen and (max-width : 610px) {
+    .formulario__tarjetas{
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 5%;
+    } 
+   
+    .tarjeta_info{
+        gap: 5px;
+    }
+
+    .formulario__informacion_tarjeta{
+        gap: 10%;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .payment__compra{
+        padding: 10px 3px;
+    }
+
+    .producto{
+        gap: 4px;
+        padding: 0;
+    }
+
+    .producto__imagen{
+        height: 100%;
+    }
+
+    .producto_imagen{
+        width: 95%;
+        height: 100%;
+    }
+
+    .producto__detalle{
+        padding: 6px;
+        gap: 10px;
+    }
+
+    .producto__nombre{
+        font-size: 17px;
+    }
+
+    .producto__precio{
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-size: 17px
+    }
+
+    .descuento__boton{
+        margin-left: 10px;
+        padding: 5px;
+        width: min-content;
+        height: max-content;
+        text-align: center;
+    }
+
+    .formulario__tarjetas{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formulario__informacion_tarjeta{
+        gap: 10%;
+    }
+
+    .input__date{
+        width: 60px;
+    }
+
+    #desglose__titulo{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width : 481px) {
+    
+.index{
+    width: 95%;
+}
+.payment{
+    grid-template-columns: 1fr;
+}
+
+.payment__formulario{
+    order: 2;
+    padding: 10px 10px;
+}
+
+.payment__compra{
+    order: 1;
+    padding: 10px 10px;
+}
+
+.producto__nombre{
+    font-size: 19px;
+}
+
+.producto__precio{
+    font-size: 18px
+}
+
+.producto__detalle{
+    padding: 10px;
+    gap: 12px;
+}
+
+.producto{
+    padding: 1px 10px;
+    gap: 16px;
+}
+
+.producto__imagen{
+    width: 150px;
+    display: flex;
+    height: 130px;
+}
+
+.producto_imagen{
+    width: 150px;
+    height: 130px;
+}
+
+.formulario__tarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    gap: 15px;
+}
+
+
+.formulario__informacion_tarjeta{
+    gap: 40%;
+    padding: 5px;
+}
+
+.tarjeta{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta_info{
+    gap: 10px;
+}
+
+.descuento__boton{
+    padding: 2px 10px;
+    width: max-content;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.input__date{
+    padding: 5px 15px;
+    width: 80px;
+}
+
+#desglose__titulo{
+    font-size: 20px;
+}
+
+}
+
+*/
+
+@media (max-width: 1024px) {
+    .navbar__cart {
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
+    .index {
+        width: 98%;
+    }
+
+    .payment {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+@media (max-width: 850px) {
+    .payment {
+        grid-template-columns: 55% 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar__imagen {
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+    }
+
+    .imagen__logo {
+        width: 90px;
+        height: 70px;
+        cursor: pointer;
+    }
+
+    .navbar__titulo {
+        height: 85px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .titulo__titulo {
+        color: white;
+        font-size: 40px;
+    }
+
+    .imagen__adidas {
+        height: 50%;
+    }
+
+    .payment {
+        grid-template-columns: 55% 45%;
+    }
+
+    .producto {
+        padding: 1px 5px;
+        gap: 5px;
+    }
+
+    .producto__imagen {
+        width: 95%;
+        height: 130px;
+        display: flex;
+    }
+
+    .producto_imagen {
+        width: 100%;
+    }
+
+    .descuento__boton {
+        margin-left: 10px;
+        padding: 2px 5px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .payment__formulario,
+    .payment__compra {
+        padding: 10px 10px;
+    }
+
+    .tarjeta {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .formulario__informacion_tarjeta {
+        gap: 20%;
+    }
+
+    .formulario__tarjetas {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 5%;
+    }
+
+    .tarjeta_info {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 550px) {
+    .payment__compra {
+        padding: 10px 3px;
+    }
+
+    .producto {
+        gap: 4px;
+        padding: 0;
+    }
+
+    .producto__imagen {
+        height: 100%;
+    }
+
+    .producto_imagen {
+        width: 95%;
+        height: 100%;
+    }
+
+    .producto__detalle {
+        padding: 6px;
+        gap: 10px;
+    }
+
+    .producto__nombre {
+        font-size: 17px;
+    }
+
+    .producto__precio {
+        font-family: "Montserrat", sans-serif;
+        font-style: italic;
+        font-size: 17px;
+    }
+
+    .descuento__boton {
+        margin-left: 10px;
+        padding: 5px;
+        width: min-content;
+        height: max-content;
+        text-align: center;
+    }
+
+    .formulario__tarjetas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formulario__informacion_tarjeta {
+        gap: 10%;
+    }
+
+    .input__date {
+        width: 60px;
+    }
+
+    #desglose__titulo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .index {
+        width: 95%;
+    }
+
+    .payment {
+        grid-template-columns: 1fr;
+    }
+
+    .payment__formulario {
+        order: 2;
+        padding: 10px 10px;
+    }
+
+    .payment__compra {
+        order: 1;
+        padding: 10px 10px;
+    }
+
+    .producto {
+        padding: 1px 10px;
+        gap: 16px;
+    }
+
+    .producto__detalle {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .producto__imagen {
+        width: 150px;
+        height: 130px;
+        display: flex;
+    }
+
+    .producto_imagen {
+        width: 150px;
+        height: 130px;
+    }
+
+    .producto__nombre {
+        font-size: 19px;
+    }
+
+    .producto__precio {
+        font-size: 18px;
+    }
+
+    .formulario__tarjetas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .formulario__informacion_tarjeta {
+        gap: 10%;
+        padding: 5px;
+    }
+
+    .tarjeta {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tarjeta_info {
+        gap: 10px;
+    }
+
+    .descuento__boton {
+        padding: 2px 10px;
+        width: max-content;
+        height: auto;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .input__date {
+        padding: 5px 15px;
+        width: 80px;
+    }
+
+    #desglose__titulo {
+        font-size: 20px;
+    }
+}
+
+
+
+

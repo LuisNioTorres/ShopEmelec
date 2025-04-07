@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SHOP CSE</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/cart.css">
+    </head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="navbar__imagen">
+            <a href="./index.html">
+                <img class="imagen__logo" src="../imagenes/emelec.jpg">
+            </a>
+        </div>
+
+        <div class="navbar__titulo">
+            <h2 class="titulo__titulo"> CASA </h2>
+            <img class="imagen__adidas" src="../imagenes/adidas.png">
+        </div>
+
+        <div class="navbar__cart">
+            <i class="bi bi-cart2"> </i>
+            <div class="cart__number" id="cart__number"></div>
+        </div>
+    </div>
+
+    <div class="cart__informacion">
+        <div class="informacion__titulo">
+            <h1 class="titulo__page">SHOPCART</h1>
+            <i class="bi bi-cart2"></i>
+        </div>
+        <p><b class="informacion__cantidad">3</b> Productos Seleccionados</p>
+        <p class="informacion__total"><b id="informacion__total"></b> </p>
+        <div class="informacion__botones">
+            <a class="boton__home_enlace" href="formulario.html">
+                <div class="boton__home">Pagar</div>
+            </a>
+            <div class="boton__clear" onclick="Cart.vaciar__cart()">Vaciar Carrito</div>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+    </div>
+</body>
+<script src="../js/infoItem.js"></script>
+<script src="../js/cart.js"></script>
+</html>
