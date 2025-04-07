@@ -100,10 +100,8 @@ class UI {
         boton__home_enlace.addEventListener('click',(e)=>{
             let falta_talla = basket.some((item_storage) => item_storage.talla == 0);
             if(falta_talla){
-                console.log("HAY UN CERO")
                 e.preventDefault();
             } else {
-                console.log("TODO BIEN");
             }
             UI.block__item();
         })

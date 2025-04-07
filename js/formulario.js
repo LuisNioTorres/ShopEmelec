@@ -132,7 +132,6 @@ class UI {
         Cart.calculation();
         const payment__compra = document.querySelector('.payment__compra');
         const input_nombre = document.querySelector('#input__nombre');
-        console.log(input_nombre.value)
         const input_cedula = document.querySelector('#input__cedula');
         const subtotal = document.querySelector('#subtotal_numero');
         const iva = document.querySelector('#iva_numero');

@@ -124,7 +124,6 @@ class UI {
     }
 
     static verProducto (id) {
-        console.log(id)
         window.location.href = `producto.html?productoId=${id}`;
     }
 
@@ -161,7 +160,6 @@ class Store {
 
 class Shop {
     static incrementar(id) {
-        console.log(id)
         let divItem = id;
         let idItem = divItem.id;
         let search = basket.find((x)=>x.id == idItem)
