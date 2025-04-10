@@ -421,7 +421,10 @@ class Formulario {
 
 const inputs = document.querySelectorAll('.input');
 
-Shop.validarShop();
+window.addEventListener('load',()=>{
+    Shop.validarShop();
+});
+
 UI.generateProducto();
 Formulario.escucharInput();
 Formulario.dirigirInput();
