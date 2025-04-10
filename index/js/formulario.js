@@ -250,9 +250,9 @@ class Shop {
     static validarShop () {
         let talla = basket.some(item_storage => item_storage.talla == 0);
         if(basket.length == 0){
-            window.location.href = '../index/index.html';
+            window.location.href = '../index.html';
         } else if (talla) {
-                window.location.href = '../index/cart.html';
+                window.location.href = '../cart.html';
         } else return;
     }
 }
